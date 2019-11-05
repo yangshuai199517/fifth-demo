@@ -84,6 +84,7 @@ class JsonDemos {
     private String projectName = "guanyu";
 
     private Long startTime = new Date().getTime();
+    private  int j = 100;
 
 
 }
