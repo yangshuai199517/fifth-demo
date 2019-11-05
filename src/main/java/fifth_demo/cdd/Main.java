@@ -41,7 +41,7 @@ public class Main {
 
 @Data
 class a{
-    public  int i= 10;
+    public  int i= 1000;
    public int j = 2;
    public b b1 = new b();
 }
