@@ -26,28 +26,42 @@ public class Main {
                     .append(a2.getJ())
                     .append(";");
         });
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(new Date());
-        calendar.set(Calendar.HOUR_OF_DAY, 0);
-        calendar.set(Calendar.MINUTE, 0);
-        calendar.set(Calendar.SECOND, 0);
-        Date zero = calendar.getTime();
-
-        DateFormatUtils.format(new Date(),"yyyy-MM-dd");
-        System.out.println(DateFormatUtils.format(new Date(),"yyyy-MM-dd 00-00-00"));
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(new Date());
+//        calendar.set(Calendar.HOUR_OF_DAY, 0);
+//        calendar.set(Calendar.MINUTE, 0);
+//        calendar.set(Calendar.SECOND, 0);
+//        Date zero = calendar.getTime();
+//
+//        DateFormatUtils.format(new Date(),"yyyy-MM-dd");
+//        System.out.println(DateFormatUtils.format(new Date(),"yyyy-MM-dd 00-00-00"));
 
     }
 }
 
 @Data
 class a{
-    public  int i= 1;
+    public  int i= 10;
    public int j = 2;
    public b b1 = new b();
 }
 
 @Data
 class b{
-    public int bb=100;
+    public Long bb=1000L;
     public String bbb = "hi!";
+}
+
+class JsonDemos {
+
+
+    private String couponBatchNumber = null;
+
+    private String projectId = "1111";
+
+    private String projectName = "guanyu";
+
+    private Long startTime = new Date().getTime();
+
+
 }
