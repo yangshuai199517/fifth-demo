@@ -70,7 +70,7 @@ class a{
 
 @Data
 class b{
-    public Long bb=1000L;
+    public Long bb=10000L;
     public String bbb = "hi!";
 }
 
