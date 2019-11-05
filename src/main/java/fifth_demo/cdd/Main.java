@@ -64,7 +64,7 @@ public class Main {
 @Data
 class a{
     public  double i= 100;
-   public int j = 2;
+   public int j = 200;
    public b b1 = new b();
 }
 
