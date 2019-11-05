@@ -13,6 +13,28 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
 //        SpringApplication.run(Main.class,args);
+//        a a1 = new a();
+//        List<a> list = new ArrayList<a>();
+//        list.add(a1);
+//        list.add(a1);
+//        list.add(a1);
+//
+//        StringBuilder strs = new StringBuilder();
+//        list.stream().forEach( (a a2)  -> {
+//            strs.append(a2.getI())
+//                    .append(",")
+//                    .append(a2.getJ())
+//                    .append(";");
+//        });
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        Date zero = calendar.getTime();
+
+        DateFormatUtils.format(new Date(),"yyyy-MM-dd");
+        System.out.println(DateFormatUtils.format(new Date(),"yyyy-MM-dd 00-00-00"));
         a a1 = new a();
         List<a> list = new ArrayList<a>();
         list.add(a1);
