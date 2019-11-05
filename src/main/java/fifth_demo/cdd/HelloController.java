@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("hello")
     public Object sayhello(){
-        JsonDemo jsonDemo = new JsonDemo();
+        JsonDemos jsonDemo = new JsonDemos();
         return jsonDemo;
     }
 }
