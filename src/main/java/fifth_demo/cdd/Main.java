@@ -35,6 +35,28 @@ public class Main {
 
         DateFormatUtils.format(new Date(),"yyyy-MM-dd");
         System.out.println(DateFormatUtils.format(new Date(),"yyyy-MM-dd 00-00-00"));
+        a a1 = new a();
+        List<a> list = new ArrayList<a>();
+        list.add(a1);
+        list.add(a1);
+        list.add(a1);
+
+        StringBuilder strs = new StringBuilder();
+        list.stream().forEach( (a a2)  -> {
+            strs.append(a2.getI())
+                    .append(",")
+                    .append(a2.getJ())
+                    .append(";");
+        });
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(new Date());
+//        calendar.set(Calendar.HOUR_OF_DAY, 0);
+//        calendar.set(Calendar.MINUTE, 0);
+//        calendar.set(Calendar.SECOND, 0);
+//        Date zero = calendar.getTime();
+//
+//        DateFormatUtils.format(new Date(),"yyyy-MM-dd");
+//        System.out.println(DateFormatUtils.format(new Date(),"yyyy-MM-dd 00-00-00"));
 
     }
 }
@@ -48,6 +70,20 @@ class a{
 
 @Data
 class b{
-    public int bb=100;
+    public Long bb=1000L;
     public String bbb = "hi!";
+}
+
+class JsonDemos {
+
+
+    private String couponBatchNumber = null;
+
+    private String projectId = "1111";
+
+    private String projectName = "guanyu";
+
+    private Long startTime = new Date().getTime();
+
+
 }
