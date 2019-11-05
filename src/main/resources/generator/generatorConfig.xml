@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="MySqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+            <property name="addRemarkComments" value="true" />
+
+        </commentGenerator>
+
+        <!-- 数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/mybatis"
+                        userId="root"
+                        password="">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="mybatis.model" targetProject="src/main/java">
+
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--对应的mapper.xml文件  -->
+        <sqlMapGenerator targetPackage="mybatis.xml" targetProject="src/main/java"/>
+
+        <!-- 对应的Mapper接口类文件 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="mybatis.dao" targetProject="src/main/java"/>
+
+
+
+
+        <table tableName="%"  >
+            <generatedKey column="id" sqlStatement="MySql"/>
+        </table>
+    </context>
+</generatorConfiguration>
